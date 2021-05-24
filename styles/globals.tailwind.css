@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-gray-700;
+  }
+}
+
+.btn {
+  @apply px-5 py-3 bg-_blue hover:bg-white outline-none focus:outline-none border-2 border-_blue border-opacity-0 text-white hover:text-_blue hover:border-opacity-100 font-semibold hover:font-bold rounded-2xl w-full;
+}
+
+.input {
+  @apply px-5 py-3 w-full outline-none focus:outline-none ring-2 border border-gray-300 focus:border-opacity-0 ring-blue-300 ring-opacity-0 focus:ring-opacity-100 rounded-2xl;
+}
