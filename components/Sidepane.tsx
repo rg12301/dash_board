@@ -3,14 +3,18 @@ import Tab from "./Tab";
 import { MenuIcon } from "@heroicons/react/outline";
 import { XIcon } from "@heroicons/react/outline";
 
-interface Props {}
+interface Props {
+  changeDisplay: React.Dispatch<{
+    type: string;
+  }>;
+}
 
 export interface TabBody {
   readonly name: string;
   selected: boolean;
 }
 
-const Sidepane = (props: Props) => {
+const Sidepane = ({ changeDisplay }: Props) => {
   const [expanded, setExpanded] = useState(true);
   const initialTabs: TabBody[] = [
     { name: "Dashboard", selected: false },
@@ -22,8 +26,10 @@ const Sidepane = (props: Props) => {
     { name: "Notifications", selected: false },
     { name: "Adverts", selected: false },
   ];
-  const [tabs, setTabs] =
-    useState<Array<TabBody>>(initialTabs);
+  const [tabs, setTabs] = useState<Array<TabBody>>([
+    { name: "Dashboard", selected: true },
+    ...initialTabs.slice(1),
+  ]);
 
   const handleExpand = (state: boolean) => {
     setExpanded(!state);
@@ -62,6 +68,9 @@ const Sidepane = (props: Props) => {
               selected={tab.selected}
               onClick={() => {
                 handleSelect(tab);
+                changeDisplay({
+                  type: tab.name.toUpperCase(),
+                });
               }}
             />
           );

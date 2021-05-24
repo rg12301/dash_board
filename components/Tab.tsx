@@ -104,7 +104,7 @@ const Tab = ({
     <div
       className={`px-10 py-6 flex flex-row items-center space-x-4 ${
         selected
-          ? "bg-white text-_blue rounded-l-full"
+          ? "bg-white text-_blue rounded-l-2xl"
           : "text-white"
       } text-lg font-semibold cursor-pointer group`}
       onMouseEnter={() => {
