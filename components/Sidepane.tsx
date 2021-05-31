@@ -60,9 +60,10 @@ const Sidepane = ({ changeDisplay }: Props) => {
         {expanded ? <XIcon /> : <MenuIcon />}
       </div>
       <div className="mt-10">
-        {tabs.map((tab) => {
+        {tabs.map((tab, index) => {
           return (
             <Tab
+              key={index}
               text={tab.name}
               expanded={expanded}
               selected={tab.selected}
