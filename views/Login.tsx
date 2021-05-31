@@ -8,7 +8,7 @@ const Login = (props: Props) => {
     <section className="w-screen h-screen flex flex-col justify-start items-center">
       <Navbar />
       <form
-        className="mt-20 px-14 py-20 flex flex-col space-y-10 w-3/12 border border-gray-300 rounded-2xl"
+        className="mt-20 px-14 py-20 flex flex-col space-y-10 w-3/12 border border-gray-300 rounded-xl"
         action=""
       >
         <h3 className="text-2xl font-semibold text-center">
