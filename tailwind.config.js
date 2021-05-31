@@ -17,5 +17,5 @@ module.exports = {
       fontWeight: ["hover", "group-hover"],
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-nested-groups")],
 };
