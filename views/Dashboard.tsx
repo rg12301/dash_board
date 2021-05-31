@@ -51,7 +51,7 @@ const Dashboard = (props: Props) => {
   return (
     <div className="flex flex-row">
       <Sidepane changeDisplay={dispatchDisplay} />
-      <div className="flex flex-col">
+      <div className="w-full flex flex-col">
         <Navbar />
         {display.view}
       </div>
