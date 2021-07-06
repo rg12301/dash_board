@@ -1,17 +1,36 @@
+/* ----------------------------Tailwind ---------------------------- */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply text-gray-700;
-  }
+    body {
+        @apply text-gray-700;
+    }
 }
 
 .btn {
-  @apply px-5 py-3 bg-_blue hover:bg-white outline-none focus:outline-none border-2 border-_blue border-opacity-0 text-white hover:text-_blue hover:border-opacity-100 font-semibold hover:font-bold rounded-2xl w-full;
+    @apply bg-_blue hover:bg-white outline-none focus:outline-none border-2 border-_blue border-opacity-0 text-white hover:text-_blue hover:border-opacity-100 font-bold rounded-xl cursor-pointer;
 }
 
 .input {
-  @apply px-5 py-3 w-full outline-none focus:outline-none ring-2 border border-gray-300 focus:border-opacity-0 ring-blue-300 ring-opacity-0 focus:ring-opacity-100 rounded-2xl;
+    @apply px-5 py-1.5 w-full outline-none focus:outline-none ring-2 border border-gray-300 focus:border-opacity-0 ring-blue-300 ring-opacity-0 focus:ring-opacity-100 rounded-xl;
 }
+
+.card {
+    @apply px-8 py-6 rounded-xl border border-gray-300 hover:border-opacity-0 cursor-pointer hover:text-_blue hover:bg-blue-50;
+}
+
+.cell {
+    @apply table-cell px-4 py-5 border-b align-middle;
+}
+
+/* ---------------------------Material Data Table--------------------------- */
+@use "@material/checkbox";
+@use "@material/icon-button";
+@use "@material/data-table/data-table";
+
+@include checkbox.core-styles;
+@include icon-button.core-styles;
+@include data-table.core-styles;
+@include data-table.theme-baseline;
